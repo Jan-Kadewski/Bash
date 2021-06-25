@@ -1,0 +1,12 @@
+IFS=$'\n'
+for LINE in $(cat dane.txt)
+do
+        SUMA=0
+        IFS=$' \t\n'
+        for NUMBER in $LINE 
+        do
+        let SUMA+=NUMBER
+        done
+        echo "Line: $LINE sum: $SUMA"
+done
+
