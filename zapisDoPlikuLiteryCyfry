@@ -1,0 +1,19 @@
+#!/bin/bash
+
+for linia in `cat $1`
+do
+for znak in $linia
+do
+echo $znak + to znak
+if [[ $znak =~ [0-9] ]]
+then
+echo $znak >> liczby
+elif [[ $znak =~ [a-zA-Z] ]]
+then
+echo $znak >> litery
+fi
+done
+done
+
+
+
