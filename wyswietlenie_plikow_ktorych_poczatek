@@ -1,0 +1,17 @@
+#!/bin/bash
+counter=0
+for plik in `ls $1`
+do
+for linia in `cat $plik |head -10`
+do
+if [[ $linia =~ [0-9] ]]
+then
+let counter++
+fi
+done 
+if [ $counter -gt 0 ]
+then
+echo $plik zaczyna sie od cyfry
+fi
+done
+
